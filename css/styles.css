@@ -1,0 +1,73 @@
+/* UTILITIES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    color: rgba(255, 255, 255, .4);
+}
+
+/* Typography */
+
+.t-left {
+    text-align: left;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.t-right {
+    text-align: right;
+}
+
+/* STILE */
+
+.app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Blocco Centrale */
+
+.main-window {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Player */
+
+footer.player {
+    background: #272727;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer.player .box-left,
+footer.player .box-right {
+    flex-basis: 200px;
+    height: 40px;
+    background: rgba(182, 62, 62, 0.4);
+}
+
+footer.player .box-center {
+    flex-basis: 400px;
+    height: 40px;
+    background: rgba(182, 62, 62, 0.4);
+}
+
+
+
+
+/* MEDIA QUERIES */
+
