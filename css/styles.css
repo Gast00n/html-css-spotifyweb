@@ -12,6 +12,16 @@ body {
     color: rgba(255, 255, 255, .4);
 }
 
+.filler {
+    width: 100%;
+    height: 100%;
+    background: rgba(182, 62, 62, 0.4);
+}
+
+.p5 {
+    padding: 5px;
+}
+
 /* Typography */
 
 .t-left {
@@ -25,6 +35,8 @@ body {
 .t-right {
     text-align: right;
 }
+
+
 
 /* STILE */
 
@@ -43,6 +55,43 @@ body {
     flex-direction: row;
 }
 
+
+/* Sidebar */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 230px;
+    background: #000000;
+}
+
+
+.sidebar .sidebar-menu {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebar .sidebar-menu .box-logo {
+    flex-basis: 10%;
+}
+
+.sidebar .sidebar-menu .nav-1 {
+    flex-basis: 20%;
+}
+
+.sidebar .sidebar-menu .nav-2 {
+    flex-basis: 40%;
+}
+
+.sidebar .account {
+    flex-basis: 10%;
+}
+
+
+
+
 /* Player */
 
 footer.player {
@@ -57,13 +106,11 @@ footer.player .box-left,
 footer.player .box-right {
     flex-basis: 200px;
     height: 40px;
-    background: rgba(182, 62, 62, 0.4);
 }
 
 footer.player .box-center {
     flex-basis: 400px;
     height: 40px;
-    background: rgba(182, 62, 62, 0.4);
 }
 
 
