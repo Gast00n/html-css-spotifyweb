@@ -434,8 +434,11 @@ ul.navigazione-big li.active::before {
 /* PLAYER */
 
 footer.player {
+    padding: 20px 0;
+}
+
+footer.player {
     background: #272727;
-    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -445,15 +448,144 @@ footer.player {
 footer.player .box-left,
 footer.player .box-right {
     flex-basis: 20%;
-    height: 40px;
 }
 
 footer.player .box-center {
-    flex-basis: 300px;
-    height: 40px;
+    flex-basis: 700px;
 }
 
 
+/* Box Sinistro */
+
+footer.player .box-left {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 10px;
+}
+
+
+footer.player .box-left img {
+    width: 40px;
+}
+
+footer.player .box-left h5 {
+    font-size: 12px;
+    font-weight: 900;
+    color: #fff;
+    margin: 0 10px;
+}
+
+footer.player .box-left h5 small {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+footer.player .box-left:first-child i {
+    margin-left: 20px;
+}
+
+footer.player .box-left i:hover {
+    color: #fff;
+}
+
+footer.player .box-left *:hover {
+    cursor: pointer;    
+}
+
+/* Box Centrale */
+
+.box-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-structure {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.player-structure ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-structure ul li {
+    font-size: 14px;
+    list-style: none;
+    margin: 0 10px;
+}
+
+.player-structure ul li:nth-child(3) {
+    font-size: 25px;
+}
+
+.player-structure ul li:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.player-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player-bar span {
+    flex-basis: 5%;
+    position: relative;
+    font-size: 10px;
+}
+
+.base-bar {
+    flex-basis: 80%;
+    height: 3px;
+    border-radius: 5px;
+    background: #535353;
+    position: relative;
+}
+
+.fill-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 3px;
+    border-radius: 5px;
+    background: #bababa;
+}
+
+/* Right Bar */
+
+.box-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.box-right ul.right-player {
+    display: flex;
+    align-items: center;
+}
+
+.box-right ul.right-player li {
+    margin: 0 5px;
+    list-style: none;
+}
+
+.box-right ul.right-player li:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.box-right .base-bar {
+    flex-basis: 40%;
+    margin-left: 10px;
+}
 
 
 /* MEDIA QUERIES */
@@ -510,4 +642,7 @@ footer.player .box-center {
         flex-basis: calc(100% / 4 - 15px);
     }
     
+    footer.player .box-center {
+        flex-basis: 300px;
+    }
 }
