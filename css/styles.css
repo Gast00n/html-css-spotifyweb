@@ -38,7 +38,7 @@ body {
 
 
 
-/* STILE */
+/* LAYOUT */
 
 .app {
     width: 100%;
@@ -47,7 +47,7 @@ body {
     flex-direction: column;
 }
 
-/* Blocco Centrale */
+/* BLOCCO CENTRALE */
 
 .main-window {
     flex-grow: 1;
@@ -134,28 +134,31 @@ body {
     width: 100%;
     background: #eee;
     color: #1f1f1f;
+    margin-bottom: 30px;
 }
 
 .page-content .scrollable-content .category {
-    height: 300px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .page-content .scrollable-content .category h3 {
-    flex-basis: 100%;
 }
 
-.page-content .scrollable-content .category .content-box {
-    flex-basis: 200px;
-    /* flex-basis: calc(100/6); */
+.category .album-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
 }
 
+.album-box {
+    flex-basis: calc(100% / 6 - 15px);
+    margin-right: 15px;
+    margin-bottom: 15px;
+    height: 300px; /*Debug*/
+    background: #ccc;
+}
 
-
-/* Player */
+/* PLAYER */
 
 footer.player {
     background: #272727;
@@ -163,6 +166,7 @@ footer.player {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 footer.player .box-left,
