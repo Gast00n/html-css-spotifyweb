@@ -63,6 +63,7 @@ body {
     flex-direction: column;
     flex-basis: 230px;
     background: #000000;
+    padding: 20px;
 }
 
 
@@ -72,21 +73,151 @@ body {
     flex-direction: column;
 }
 
+/* Logo */
 
-.sidebar .sidebar-menu .box-logo {
-    flex-basis: 10%;
+.box-logo {
+    margin-bottom: 20px;
 }
 
-.sidebar .sidebar-menu .nav-1 {
-    flex-basis: 20%;
+.box-logo img.logo-big {
+    width: 75%;
+    display: block;
 }
+
+.box-logo img.logo-small {
+    width: 100%;
+    display: none;
+}
+
+/* nav-1 */
+
+.nav-1 {
+    margin-bottom: 30px;
+}
+
+.sidebar .sidebar-menu .nav-1 ul.navigazione-big {
+    list-style: none;
+}
+
+.sidebar .sidebar-menu .nav-1 ul.navigazione-big li {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+ul.navigazione-big img {
+    width: 25px;
+    fill: rgba(255, 255, 255, .4);
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+ul.navigazione-big span {
+    font-size: 16px;
+    line-height: 24px;
+    width: 20px;
+}
+
+ul.navigazione-big li:first-child img {
+    fill: #fff;
+}
+
+ul.navigazione-big li:first-child span {
+    color: #fff;
+}
+
+ul.navigazione-big li.active {
+    position: relative;
+}
+
+ul.navigazione-big li.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 4px;
+    height: 35px;
+    background: #8ed126;
+}
+
+.nav-1 ul.navigazione-big li:hover {
+    color: #fff;
+}
+
+/* nav-2 */
 
 .sidebar .sidebar-menu .nav-2 {
-    flex-basis: 40%;
+    display: block;
 }
+
+.nav-2 h2 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.nav-2 ul.playlist {
+    list-style: none;
+}
+
+.nav-2 ul.playlist li {
+    padding: 10px 0;
+}
+
+.nav-2 ul.playlist li:hover {
+    color: #fff;
+}
+
+.nav-2 ul.playlist li.active {
+    display: flex;
+    align-items: center;
+}
+
+.nav-2 ul.playlist li.active i {
+    font-size: 45px;
+    margin-right: 10px;
+}
+
+
+
+/* Account */
 
 .sidebar .account {
     flex-basis: 10%;
+}
+
+.account .install-app {
+    padding: 10px 0;
+    font-size: 12px;
+    border-bottom: 1px solid #5c5c5c;
+}
+
+.account .profilo {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.account .profilo span {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.account .profilo .img-profile {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #7f7f7f;
+    color: #fff;
+    overflow: hidden;
+}
+
+.account .profilo .img-profile img {
+    width: 100%;
 }
 
 
@@ -171,12 +302,12 @@ footer.player {
 
 footer.player .box-left,
 footer.player .box-right {
-    flex-basis: 200px;
+    flex-basis: 20%;
     height: 40px;
 }
 
 footer.player .box-center {
-    flex-basis: 400px;
+    flex-basis: 300px;
     height: 40px;
 }
 
@@ -185,3 +316,50 @@ footer.player .box-center {
 
 /* MEDIA QUERIES */
 
+/* Tablet */
+@media screen and (max-width: 600px) {
+
+    .sidebar {
+        flex-basis: 50px;
+        padding: 5px;
+    }    
+
+    .box-logo img.logo-big {
+        display: none;
+    }
+    
+    .box-logo img.logo-small {
+        display: block;
+    }
+
+    .sidebar .sidebar-menu .nav-2 {
+        display: none;
+    }
+
+    .page-content .scrollable {
+        padding: 90px 0 0;
+    }
+
+    .page-content .scrollable-content .menu-bar {
+        width: 100vh;
+        margin-bottom: 30px;
+    }
+
+    .album-box {
+        flex-basis: calc(100% / 2 - 15px);
+    }
+
+    footer.player .box-center {
+        flex-basis:50%;
+    }
+
+}
+
+/* Schermi Classici */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+    .album-box {
+        flex-basis: calc(100% / 4 - 15px);
+    }
+    
+}
