@@ -246,13 +246,20 @@ ul.navigazione-big li.active::before {
 .top-bar a {
     display: inline-block;
     padding: 10px 40px;
-    color: #f1f1f1;
+    color: rgba(255, 255, 255, .4);
     text-transform: uppercase;
     border-radius: 25px;
-    border: 1px solid #f1f1f1;
+    border: 1px solid rgba(255, 255, 255, .4);
     font-size: 12px;
     text-decoration: none;
 }
+
+.top-bar a:hover {
+    color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+}
+
+
 
 /* SCROLLABILE */
 
@@ -273,12 +280,50 @@ ul.navigazione-big li.active::before {
     flex-direction: column;
 }
 
+/* Menù */
+
 .page-content .scrollable-content .menu-bar {
-    height: 100px;
     width: 100%;
-    background: #eee;
-    color: #1f1f1f;
     margin-bottom: 30px;
+}
+
+.menu-bar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.menu-bar ul li {
+    list-style:none;
+    margin: 10px;
+}
+
+.menu-bar ul li a {
+    text-decoration:none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    color:  rgba(255, 255, 255, .4);
+}
+
+.menu-bar ul li.active a {
+    position:relative;
+}
+
+.menu-bar ul li.active a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    background: #8ed126;
+}
+
+.menu-bar ul li:hover a {
+    color: #f1f1f1;
 }
 
 .page-content .scrollable-content .category {
@@ -357,6 +402,12 @@ footer.player .box-center {
         width: 100vh;
         margin-bottom: 30px;
     }
+
+    
+    .menu-bar ul li {
+        width: calc(100%/4 - 20px);    
+    }
+
 
     .album-box {
         flex-basis: calc(100% / 2 - 15px);
