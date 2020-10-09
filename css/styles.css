@@ -238,10 +238,23 @@ ul.navigazione-big li.active::before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 90px;
-    background: rgba(100, 50, 0, .5);
+    background:rgba(0, 0, 0, 0.6);
+    padding: 25px 0; 
     z-index: 1;
 }
+
+.top-bar a {
+    display: inline-block;
+    padding: 10px 40px;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    border-radius: 25px;
+    border: 1px solid #f1f1f1;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* SCROLLABILE */
 
 .page-content .scrollable {
     position: absolute;
