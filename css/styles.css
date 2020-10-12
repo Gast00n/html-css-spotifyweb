@@ -558,6 +558,26 @@ footer.player .box-left *:hover {
     background: #bababa;
 }
 
+.fill-bar::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: -3px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    display: none;
+}
+
+.fill-bar:hover {
+    background: #8ed126;
+}
+
+.fill-bar:hover::after {
+    display: block;
+}
+
 /* Right Bar */
 
 .box-right {
